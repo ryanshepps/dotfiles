@@ -1,0 +1,26 @@
+[core]
+	# Makes vim the default editor when editing .git files.
+	editor = vim
+
+	# Doesn't add crlf to each line ending.
+	autocrlf = input
+[alias]
+         # -v adds a commented out diff to the commit message.
+         c = commit -v
+ 
+         # Always pull when checking out a new branch (Stops an issue with testing old branches).
+         ch = !sh -c 'git checkout -q $@ \
+                 && git diff --name-status \
+                 && echo Switched to branch $(git branch --show-current) \
+                 && git pull origin $(git branch --show-current)' -
+ 
+         d = diff
+         ds = diff --staged
+         l = log --oneline
+         p = push
+         rs = restore
+         re = reset
+         s = status
+[advice]
+	# Remove the "Use git add to..." hints from git status.
+	statusHints = false
