@@ -1,0 +1,30 @@
+#!/bin/bash
+
+lock() {
+        i3lock --ignore-empty-password --no-unlock-indicator --color=000000
+}
+
+case "$1" in
+        lock)
+                lock
+                ;;
+        logout)
+                # Sends the exit command to i3 window manager           
+                i3-msg exit
+                ;;
+        reboot)
+                systemctl reboot
+                ;;
+        shutdown) 
+                systemctl poweroff
+                ;;
+        sleep)
+                lock
+                ;;
+        *)
+                echo "Usage: $0 {lock|logout|reboot|shutdown|sleep}"
+                ;;
+esac
+
+exit 0
+
