@@ -48,6 +48,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 Plug 'mhinz/vim-grepper'
 
+Plug 'dense-analysis/ale'
+
 " Theme
 Plug 'rakr/vim-one'
 
