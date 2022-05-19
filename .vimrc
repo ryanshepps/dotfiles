@@ -28,6 +28,9 @@ set cursorline
     set termguicolors
  endif
 
+" No text wrapping
+set nowrap
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
