@@ -170,6 +170,6 @@ mode $system_command_mode {
 
 # i3bar configuration
 bar {
-        status_command i3status -c ~/.config/i3/i3status.conf
 	separator_symbol "/"
+    status_command ~/.config/i3/i3status
 }
