@@ -4,6 +4,9 @@
 
 	# Doesn't add crlf to each line ending.
 	autocrlf = input
+[user]
+    email = sheppardryan@rogers.com
+    name = Ryan Sheppard
 [alias]
          # -v adds a commented out diff to the commit message.
          c = commit -v
