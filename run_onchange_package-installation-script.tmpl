@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Installing packages for {{ .osid }}."
+
+{{ if eq .osid "linux-fedora" }}
+# BASH
+sudo dnf install ranger
+
+# Vim
+sudo dnf install the_silver_searcher
+{{ end }}
