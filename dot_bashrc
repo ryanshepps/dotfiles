@@ -26,3 +26,5 @@ unset rc
 
 NPM_PACKAGES="${HOME}/.npm-packages" # Global NPM package location
 export PATH="$PATH:$NPM_PACKAGES/bin"
+
+export EDITOR=$(which vim)
