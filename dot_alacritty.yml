@@ -3,7 +3,7 @@ key_bindings:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font
     style: Regular
 
   size: 12
