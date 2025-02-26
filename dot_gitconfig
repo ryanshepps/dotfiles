@@ -4,6 +4,10 @@
 
 	# Doesn't add crlf to each line ending.
 	autocrlf = input
+
+	# Allows "git status" to be quicker, at the cost of some small CPU/Memory usage.
+        fsmonitor = true
+        untrackedCache = true
 [user]
     email = sheppardryan@rogers.com
     name = Ryan Sheppard
@@ -27,3 +31,43 @@
 [advice]
 	# Remove the "Use git add to..." hints from git status.
 	statusHints = false
+[branch]
+	# When listing branches, sort them by last commit date instead of alphabetically.
+        sort = -committerdate
+[column]
+	# Breaks up some single column lists into multiple columns.
+        ui = auto
+[tag]
+	# Better sorting for semantic versioning.
+        sort = version:refname
+[diff]
+        algorithm = histogram
+        renames = true
+
+	# Changes the color of code that has simply moved instead of changed.
+        colorMoved = plain
+
+	# Tells you where the diff is coming from.
+        mnemonicPrefix = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+
+[help]
+        autocorrect = prompt
+[rerere]
+	# Reuses old rebase conflict resolutions.
+        enabled = true
+        autoupdate = true
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
+[merge]
+        # Adds the original "base" change looked like.
+        conflictstyle = zdiff3 
